@@ -49,6 +49,7 @@ run the script, `sudo bash ubuntu.sh`. +
 == Configuration options
 [source,shell]
 ----
+// <1> (REMOVED)
 SSH_GRPS='sudo' // <2>
 SYSCTL_CONF='./misc/sysctl.conf' // <3>
 AUDITD_MODE='1' // <4>
@@ -106,10 +107,10 @@ USERCONF='/etc/systemd/user.conf'
 ==== 01_pre
 Setup script, sets APT flags and permission checks.
 
-~~ ==== 02_firewall ~~
-~~ RHEL-07-040520 ~~
+~~ ==== 02_firewall
+RHEL-07-040520
 
-~~ Enable `ufw`, use `/etc/sysctl.conf`, and allow port 22 from `$FW_ADMIN`. ~~
+Enable `ufw`, use `/etc/sysctl.conf`, and allow port 22 from `$FW_ADMIN`. ~~
 
 ==== 03_disablenet
 CCE-26828-4, CCE-27106-4
