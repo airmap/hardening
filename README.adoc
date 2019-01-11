@@ -49,7 +49,6 @@ run the script, `sudo bash ubuntu.sh`. +
 == Configuration options
 [source,shell]
 ----
-~~FW_ADMIN='127.0.0.1' // <1>~~
 SSH_GRPS='sudo' // <2>
 SYSCTL_CONF='./misc/sysctl.conf' // <3>
 AUDITD_MODE='1' // <4>
@@ -89,7 +88,6 @@ UFWDEFAULT='/etc/default/ufw'
 USERADD='/etc/default/useradd'
 USERCONF='/etc/systemd/user.conf'
 ----
-~~<1> The IP addresses that will be able to connect with SSH, separated by spaces.~~
 <2> Which group the users have to be member of in order to acess via SSH, separated by spaces.
 <3> Stricter sysctl settings.
 <4> Auditd failure mode. 0=silent 1=printk 2=panic.
@@ -108,10 +106,10 @@ USERCONF='/etc/systemd/user.conf'
 ==== 01_pre
 Setup script, sets APT flags and permission checks.
 
-~~==== 02_firewall
-RHEL-07-040520
+~~==== 02_firewall~~
+~~RHEL-07-040520~~
 
-Enable `ufw`, use `/etc/sysctl.conf`, and allow port 22 from `$FW_ADMIN`.~~
+~~Enable `ufw`, use `/etc/sysctl.conf`, and allow port 22 from `$FW_ADMIN`.~~
 
 ==== 03_disablenet
 CCE-26828-4, CCE-27106-4
